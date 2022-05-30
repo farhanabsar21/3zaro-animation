@@ -1,0 +1,78 @@
+$primaryColor: #46A4A3;
+$secondaryColor: #BB9256;
+$optionalColor: #EF9740;
+$measure: calc(110px + 2vw);
+$circleDyn: 45px;
+
+@mixin circleCommon {
+    height: $circleDyn;
+    width: $circleDyn;
+    border-radius: 50%; 
+    position: absolute;
+    bottom: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .circle-container{
+        height: $measure;
+        width: $measure;
+        position: relative;
+        z-index: 2;
+        .circle-1{
+            @include circleCommon();
+            background-color: $primaryColor;
+            left: 0;
+            animation: circle1 1.2s infinite alternate linear;
+        }
+        .circle-2{
+            @include circleCommon();
+            background-color: $secondaryColor;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: circle2 1.2s infinite alternate linear;
+        }
+        .circle-3{
+            @include circleCommon();
+            background-color: $optionalColor;
+            right: 0;
+            animation: circle3 1.2s infinite alternate linear;
+        }
+    }
+}
+
+@keyframes circle1 {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: calc(100% - 45px);
+    }
+}
+
+@keyframes circle2 {
+    0%{
+        bottom: 0;
+    }
+    100%{
+        bottom: calc(100% - 45px);
+    }
+}
+
+@keyframes circle3 {
+    0%{
+        right: 0;
+    }
+    100%{
+        right: calc(100% - 45px);
+    }
+}

@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.logo-container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo-container .circle-container {
+  height: calc(110px + 2vw);
+  width: calc(110px + 2vw);
+  position: relative;
+  z-index: 2;
+}
+
+.logo-container .circle-container .circle-1 {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  background-color: #46A4A3;
+  left: 0;
+  -webkit-animation: circle1 1.2s infinite alternate linear;
+          animation: circle1 1.2s infinite alternate linear;
+}
+
+.logo-container .circle-container .circle-2 {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  background-color: #BB9256;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: circle2 1.2s infinite alternate linear;
+          animation: circle2 1.2s infinite alternate linear;
+}
+
+.logo-container .circle-container .circle-3 {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  background-color: #EF9740;
+  right: 0;
+  -webkit-animation: circle3 1.2s infinite alternate linear;
+          animation: circle3 1.2s infinite alternate linear;
+}
+
+@-webkit-keyframes circle1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 45px);
+  }
+}
+
+@keyframes circle1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 45px);
+  }
+}
+
+@-webkit-keyframes circle2 {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: calc(100% - 45px);
+  }
+}
+
+@keyframes circle2 {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: calc(100% - 45px);
+  }
+}
+
+@-webkit-keyframes circle3 {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: calc(100% - 45px);
+  }
+}
+
+@keyframes circle3 {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: calc(100% - 45px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
